@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZERØTH - Survive the Shadows</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="text/babel">
+        const HeroSection = () => (
+            <section className="relative h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('https://placehold.co/1920x1080?text=Dark+London+Streets+with+Subtle+Mist')" }}>
+                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <div className="relative z-10 text-center">
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6">Survive the shadows. Rewrite the future.</h1>
+                    <div className="space-x-4">
+                        <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Watch Trailer</button>
+                        <button className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Join the Journey</button>
+                    </div>
+                </div>
+            </section>
+        );
+
+        const AboutSection = () => (
+            <section className="py-16 px-4 md:px-16 bg-gray-800">
+                <h2 className="text-4xl font-bold mb-8">About the Game</h2>
+                <p className="mb-4">Set in post-WWII London, ZERØTH is a gripping open-world game that blends survival, mystery, and supernatural elements. A mysterious virus turns hosts into psychomaniacs, and vampires lurk in the shadows, posing a deceptive threat.</p>
+                <div className="carousel">
+                    <img src="https://placehold.co/600x400?text=Concept+Art+1" alt="Concept art of a dark alley in post-WWII London with mist and shadows" className="mb-4"/>
+                    <img src="https://placehold.co/600x400?text=Concept+Art+2" alt="Concept art of a character in a trench coat standing under a streetlight" className="mb-4"/>
+                    <img src="https://placehold.co/600x400?text=Concept+Art+3" alt="Concept art of a vampire with glowing red eyes lurking in the shadows" className="mb-4"/>
+                </div>
+            </section>
+        );
+
+        const FeaturesSection = () => (
+            <section className="py-16 px-4 md:px-16 bg-gray-700">
+                <h2 className="text-4xl font-bold mb-8">Gameplay Features</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="feature-card p-4 bg-gray-800 rounded">
+                        <i className="fas fa-heartbeat text-3xl mb-4"></i>
+                        <h3 className="text-2xl font-bold mb-2">Survival Mechanics</h3>
+                        <p>Manage resources, health, and sanity in a world where danger lurks around every corner.</p>
+                    </div>
+                    <div className="feature-card p-4 bg-gray-800 rounded">
+                        <i className="fas fa-map text-3xl mb-4"></i>
+                        <h3 className="text-2xl font-bold mb-2">Open-World Exploration</h3>
+                        <p>Explore a vast, detailed world filled with secrets, side quests, and hidden dangers.</p>
+                    </div>
+                    <div className="feature-card p-4 bg-gray-800 rounded">
+                        <i className="fas fa-book text-3xl mb-4"></i>
+                        <h3 className="text-2xl font-bold mb-2">Immersive Storytelling</h3>
+                        <p>Experience a rich narrative with branching paths and multiple endings.</p>
+                    </div>
+                    <div className="feature-card p-4 bg-gray-800 rounded">
+                        <i className="fas fa-robot text-3xl mb-4"></i>
+                        <h3 className="text-2xl font-bold mb-2">AI-Driven NPCs</h3>
+                        <p>Interact with intelligent NPCs whose actions and decisions impact the world around you.</p>
+                    </div>
+                </div>
+            </section>
+        );
+
+        const TeamSection = () => (
+            <section className="py-16 px-4 md:px-16 bg-gray-800">
+                <h2 className="text-4xl font-bold mb-8">Meet the Team</h2>
+                <p className="mb-4">We are an indie studio with a passion for crafting AAA experiences. Join us in our journey to create something extraordinary.</p>
+                <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Join the Team</button>
+            </section>
+        );
+
+        const NewsletterSection = () => (
+            <section className="py-16 px-4 md:px-16 bg-gray-700">
+                <h2 className="text-4xl font-bold mb-8">Stay Updated</h2>
+                <p className="mb-4">Sign up for our newsletter to receive exclusive behind-the-scenes content and early access to game updates.</p>
+                <form className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                    <input type="email" placeholder="Enter your email" className="p-2 rounded bg-gray-800 text-white"/>
+                    <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Subscribe</button>
+                </form>
+            </section>
+        );
+
+        const Footer = () => (
+            <footer className="py-8 px-4 md:px-16 bg-gray-900 text-center">
+                <div className="mb-4">
+                    <a href="#" className="text-white mx-2"><i className="fab fa-facebook-f"></i></a>
+                    <a href="#" className="text-white mx-2"><i className="fab fa-twitter"></i></a>
+                    <a href="#" className="text-white mx-2"><i className="fab fa-instagram"></i></a>
+                    <a href="#" className="text-white mx-2"><i className="fab fa-youtube"></i></a>
+                </div>
+                <p>&copy; 2023 ZERØTH. Powered by React & Tailwind CSS.</p>
+            </footer>
+        );
+
+        const App = () => (
+            <div>
+                <HeroSection />
+                <AboutSection />
+                <FeaturesSection />
+                <TeamSection />
+                <NewsletterSection />
+                <Footer />
+            </div>
+        );
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
